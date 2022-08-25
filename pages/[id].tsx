@@ -72,7 +72,8 @@ const Post: NextPage<Props> = (props) => {
             <Head>
                 <title>{post.title}</title>
             </Head>
-            <div className="px-12 py-8 overflow-auto">
+            <div className="h-screen w-screen overflow-auto">
+            <div className="px-12 py-8">
                 <h1 className="text-2xl my-4">{post.title}</h1>
                 <p className="my-4 text-slate-600 dark:text-gray-400 my-2">
                     <em>{post.author}</em> at{" "}
@@ -92,6 +93,7 @@ const Post: NextPage<Props> = (props) => {
                         <Comment key={c.id} comment={c} />
                     ))}
                 </div>
+            </div>
             </div>
         </>
     );

@@ -19,6 +19,7 @@ body {
     color: var(--blue);
     min-height: 100vh;
     min-width: 100vw;
+    overflow: hidden;
 }
 
 a {
