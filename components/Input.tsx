@@ -27,7 +27,7 @@ const Input = (props: IInputProps) => {
                 <title>Search Hacker News</title>
             </Head>
             <div
-                className="relative border-2 md:w-6/12 w-10/12"
+                className="relative md:w-6/12 w-10/12"
                 {...containerProps}
             >
                 <input
@@ -35,7 +35,7 @@ const Input = (props: IInputProps) => {
                     ref={inputRef}
                     className={`${
                         props.className ? props.className : ""
-                    } bg-beige dark:bg-blue dark:text-beige rounded py-3 px-5 border border-blue acive:border-2 transition duration-100 text-blue my-2 z-10 outline-none w-full`}
+                    } bg-beige dark:bg-blue dark:text-beige rounded py-3 px-5 border border-blue dark:border-beige acive:border-2 transition duration-100 text-blue my-2 z-10 outline-none w-full`}
                     placeholder={props.label}
                 />
                 <label
