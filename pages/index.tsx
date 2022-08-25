@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                     fetchedCurr.current = true;
                     numPages.current = res.nbPages;
                 });
-        }, 1500);
+        }, 750);
     }, [query]);
 
     const handleScroll = (props: ListOnScrollProps) => {
