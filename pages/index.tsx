@@ -121,6 +121,10 @@ const Home: NextPage = () => {
                         box-shadow: 8px 8px 16px #d4cab9, -8px -8px 16px #fff6e3;
                     }
 
+                    a {
+                        overflow-wrap: anywhere;
+                    }
+
                     @media (prefers-color-scheme: dark) {
                         div > div {
                             background: var(--blue);
