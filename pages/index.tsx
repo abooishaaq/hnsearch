@@ -98,7 +98,7 @@ const Home: NextPage = () => {
     const Post = ({ index, style }: { index: number; style: any }) => {
         const post = results[index];
         return (
-            <div style={style} className="p-16">
+            <div style={style} className="p-4 md:p-16">
                 <div className="flex rounded-lg h-56 p-8 flex-col justify-center text-blue dark:text-beige">
                     <h1 className="text-2xl my-4 w-full">{post.title}</h1>
                     <p>
