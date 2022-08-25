@@ -57,6 +57,7 @@ const Home: NextPage = () => {
                     setCurrPage(1);
                     fetchedCurr.current = true;
                     numPages.current = res.nbPages;
+                    setErrorMsg("");
                 })
                 .catch((err) => {
                     setErrorMsg("failed to fetch posts");
@@ -95,6 +96,7 @@ const Home: NextPage = () => {
                     setCurrPage(currPage + 1);
                     fetchedCurr.current = true;
                     fetching.current = false;
+                    setErrorMsg("");
                 })
                 .catch((err) => {
                     setErrorMsg("failed to load more posts");
