@@ -22,6 +22,7 @@ const Home: NextPage = () => {
     const fetching = useRef(false);
     const numPages = useRef(0);
     const timeoutRef = useRef<NodeJS.Timeout | number | undefined>(undefined);
+    const [errorMsg, setErrorMsg] = useState("");
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setQuery(e.target.value);
@@ -56,6 +57,9 @@ const Home: NextPage = () => {
                     setCurrPage(1);
                     fetchedCurr.current = true;
                     numPages.current = res.nbPages;
+                })
+                .catch((err) => {
+                    setErrorMsg("failed to fetch posts");
                 });
         }, 750);
     }, [query]);
@@ -91,6 +95,9 @@ const Home: NextPage = () => {
                     setCurrPage(currPage + 1);
                     fetchedCurr.current = true;
                     fetching.current = false;
+                })
+                .catch((err) => {
+                    setErrorMsg("failed to laod more posts");
                 });
         }
     };
@@ -146,6 +153,7 @@ const Home: NextPage = () => {
                         value={query}
                         onChange={handleInputChange}
                     />
+                    <p>{errorMsg}</p>
                 </div>
                 <List
                     height={720}
