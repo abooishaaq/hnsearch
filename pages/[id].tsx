@@ -24,7 +24,7 @@ const Comment = ({ comment }: { comment: IComment }) => {
     };
 
     return (
-        <div className="w-full ml-20 my-8">
+        <div className="w-full ml-6 sm:ml-12 md:ml-20 my-8">
             <p className="text-slate-600 dark:text-gray-400 my-2">
                 <em>{comment.author}</em> at{" "}
                 <em>
