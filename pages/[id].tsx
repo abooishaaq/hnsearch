@@ -112,7 +112,7 @@ const prettierComments = (comments: any[]): IComment[] => {
 Post.getInitialProps = async (ctx) => {
     const id = ctx.query.id;
 
-    const res = await fetch(`http://hn.algolia.com/api/v1/items/${id}`);
+    const res = await fetch(`https://hn.algolia.com/api/v1/items/${id}`);
 
     const data = await res.json();
 
