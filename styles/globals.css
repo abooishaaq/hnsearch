@@ -29,6 +29,7 @@ a {
 
 * {
     box-sizing: border-box;
+    overflow-wrap: anywhere;
 }
 
 @media (prefers-color-scheme: dark) {
