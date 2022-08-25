@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                     fetching.current = false;
                 })
                 .catch((err) => {
-                    setErrorMsg("failed to laod more posts");
+                    setErrorMsg("failed to load more posts");
                 });
         }
     };
